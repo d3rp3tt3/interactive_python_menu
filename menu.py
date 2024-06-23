@@ -121,20 +121,20 @@ while place_order:
                     }
                     i += 1
             # 2. Ask customer to input menu item number
-            menu_item = input(
+            menu_selection = input(
                 "\nEnter the number of the menu item you'd like to order: ")
 
             # 3. Check if the customer typed a number
-            if menu_item.isdigit():
+            if menu_selection.isdigit():
 
                 # Convert the menu selection to an integer
-                menu_item = int(menu_item)
+                menu_selection = int(menu_selection)
 
                 # 4. Check if the menu selection is in the menu items
-            if menu_item in menu_items.keys():
+            if menu_selection in menu_items.keys():
 
                 # Store the item name as a variable
-                item_name = menu_items[menu_item]["Item name"]
+                item_name = menu_items[menu_selection]["Item name"]
 
                 # Ask the customer for the quantity of the menu item
                 quantity = input(
@@ -149,7 +149,7 @@ while place_order:
                     # Add the item name, price, and quantity to the order list
                 order_list.append({
                     "Item name": item_name,
-                    "Price": menu_items[menu_item]["Price"],
+                    "Price": menu_items[menu_selection]["Price"],
                     "Quantity": quantity
                 })
 
