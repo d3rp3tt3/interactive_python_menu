@@ -89,8 +89,7 @@ while place_order:
             # Save the menu category name to a variable
             menu_category_name = menu_items[int(menu_category)]
             # Print out the menu category name they selected
-            print(f"\nYou chose to order a '{
-                  menu_category_name}'.\n")
+            print(f"\nYou chose to order a '{menu_category_name}'.\n")
 
             # Print out the menu options from the menu_category_name
             print(f"Here are the items from the '{menu_category_name}' menu:")
@@ -126,7 +125,7 @@ while place_order:
                 "\nEnter the number of the menu item you'd like to order: ")
 
             # 3. Check if the customer typed a number
-            if menu_item.isdigit():
+            if menu_item.isdigit() and int(menu_item) in menu_items.keys():
 
                 # Convert the menu selection to an integer
                 menu_item = int(menu_item)
