@@ -125,33 +125,33 @@ while place_order:
                 "\nEnter the number of the menu item you'd like to order: ")
 
             # 3. Check if the customer typed a number
-            if menu_item.isdigit() and int(menu_item) in menu_items.keys():
+            if menu_item.isdigit():
 
                 # Convert the menu selection to an integer
                 menu_item = int(menu_item)
 
                 # 4. Check if the menu selection is in the menu items
-                if menu_item in menu_items.keys():
+            if menu_item in menu_items.keys():
 
-                    # Store the item name as a variable
-                    item_name = menu_items[menu_item]["Item name"]
+                # Store the item name as a variable
+                item_name = menu_items[menu_item]["Item name"]
 
-                    # Ask the customer for the quantity of the menu item
-                    quantity = input(
-                        f"How many '{item_name}' would you like to order? ")
+                # Ask the customer for the quantity of the menu item
+                quantity = input(
+                    f"How many '{item_name}' would you like to order? ")
 
-                    # Check if the quantity is a number, default to 1 if not
-                    if quantity.isdigit:
-                        quantity = int(quantity)
-                    else:
-                        quantity = 1
+                # Check if the quantity is a number, default to 1 if not
+                if quantity.isdigit:
+                    quantity = int(quantity)
+                else:
+                    quantity = 1
 
                     # Add the item name, price, and quantity to the order list
-                    order_list.append({
-                        "Item name": item_name,
-                        "Price": menu_items[menu_item]["Price"],
-                        "Quantity": quantity
-                    })
+                order_list.append({
+                    "Item name": item_name,
+                    "Price": menu_items[menu_item]["Price"],
+                    "Quantity": quantity
+                })
 
                 # Tell the customer that their input isn't valid
             else:
